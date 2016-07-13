@@ -33,7 +33,7 @@ M = sparse( [II II II II II,...
             -1/dr^2-1/dz^2+INE*0, 1/dr^2+INE*0, 1/dz^2+INE*0],... %INE
             Nr*Nz, Nr*Nz);
         
-% rhs
+% right hand side
 b = zeros(Nr*Nz, 1);
 b([IN INE INW]) = k2/(1-k2*dz)/dz;
 b([ISF ISW]) = -k1/dz;
